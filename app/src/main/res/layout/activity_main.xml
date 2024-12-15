@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/editTextNumber"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@color/white"
+        android:ems="10"
+        android:enabled="false"
+        android:inputType="number"
+        android:textAlignment="textEnd"
+        android:textSize="40dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <!-- First Line -->
+        <Button
+            android:id="@+id/btnClear"
+            android:layout_width="@dimen/button_size"
+            android:layout_height="@dimen/button_size"
+            android:background="@color/white"
+            android:text="C"
+            android:onClick="Clear"
+            android:textColor="@color/side_buttons"
+            android:textSize="@dimen/text_size"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnDevide"
+            android:layout_width="@dimen/button_size"
+            android:layout_height="@dimen/button_size"
+            android:background="@color/white"
+            android:text="/"
+            android:onClick="Input"
+            android:textColor="@color/side_buttons"
+            android:textSize="@dimen/text_size"
+            app:layout_constraintStart_toEndOf="@+id/btnClear"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnMultiply"
+            android:layout_width="@dimen/button_size"
+            android:layout_height="@dimen/button_size"
+            android:background="@color/white"
+            android:text="*"
+            android:onClick="Input"
+            android:textColor="@color/side_buttons"
+            android:textSize="@dimen/text_size"
+            app:layout_constraintStart_toEndOf="@+id/btnDevide"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/btnDelete"
+            android:layout_width="@dimen/button_size"
+            android:layout_height="@dimen/button_size"
+            android:src="@drawable/button_delete"
+            android:onClick="Delete"
+            android:textColor="@color/side_buttons"
+            android:textSize="@dimen/text_size"
+            app:layout_constraintStart_toEndOf="@+id/btnMultiply"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Second Line -->
+
+        <Button
+            android:id="@+id/btnSeven"
+            android:layout_width="@dimen/button_size"
+            android:layout_height="@dimen/button_size"
+            android:background="@color/white"
+            android:text="7"
+            android:onClick="Input"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnClear" />
+
+        <Button
+            android:id="@+id/btnEight"
+            android:layout_width="@dimen/button_size"
+            android:layout_height="@dimen/button_size"
+            android:background="@color/white"
+            android:text="8"
+            android:onClick="Input"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size"
+            app:layout_constraintStart_toEndOf="@+id/btnSeven"
+            app:layout_constraintTop_toBottomOf="@+id/btnDevide" />
+
+        <Button
+            android:id="@+id/btnNine"
+            android:layout_width="@dimen/button_size"
+            android:layout_height="@dimen/button_size"
+            android:background="@color/white"
+            android:text="9"
+            android:onClick="Input"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size"
+            app:layout_constraintStart_toEndOf="@+id/btnEight"
+            app:layout_constraintTop_toBottomOf="@+id/btnMultiply" />
+
+        <Button
+            android:id="@+id/btnMinus"
+            android:layout_width="@dimen/button_size"
+            android:layout_height="@dimen/button_size"
+            android:background="@color/white"
+            android:text="-"
+            android:onClick="Input"
+            android:textColor="@color/side_buttons"
+            android:textSize="@dimen/text_size"
+            app:layout_constraintStart_toEndOf="@+id/btnNine"
+            app:layout_constraintTop_toBottomOf="@+id/btnDelete" />
+
+        <!-- Third Line -->
+
+        <Button
+            android:id="@+id/btnFour"
+            android:layout_width="@dimen/button_size"
+            android:layout_height="@dimen/button_size"
+            android:background="@color/white"
+            android:text="4"
+            android:onClick="Input"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnSeven" />
+
+        <Button
+            android:id="@+id/btnFive"
+            android:layout_width="@dimen/button_size"
+            android:layout_height="@dimen/button_size"
+            android:background="@color/white"
+            android:text="5"
+            android:onClick="Input"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size"
+            app:layout_constraintStart_toEndOf="@+id/btnFour"
+            app:layout_constraintTop_toBottomOf="@+id/btnEight" />
+
+        <Button
+            android:id="@+id/btnSix"
+            android:layout_width="@dimen/button_size"
+            android:layout_height="@dimen/button_size"
+            android:background="@color/white"
+            android:text="6"
+            android:onClick="Input"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size"
+            app:layout_constraintStart_toEndOf="@+id/btnFive"
+            app:layout_constraintTop_toBottomOf="@+id/btnNine" />
+
+        <Button
+            android:id="@+id/btnAdd"
+            android:layout_width="@dimen/button_size"
+            android:layout_height="@dimen/button_size"
+            android:background="@color/white"
+            android:text="+"
+            android:onClick="Input"
+            android:textColor="@color/side_buttons"
+            android:textSize="@dimen/text_size"
+
+            app:layout_constraintStart_toEndOf="@+id/btnSix"
+            app:layout_constraintTop_toBottomOf="@+id/btnMinus" />
+
+        <!-- Fourth Line -->
+
+        <Button
+            android:id="@+id/btnOne"
+            android:layout_width="@dimen/button_size"
+            android:layout_height="@dimen/button_size"
+            android:background="@color/white"
+            android:text="1"
+            android:onClick="Input"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnFour" />
+
+        <Button
+            android:id="@+id/btnTwo"
+            android:layout_width="@dimen/button_size"
+            android:layout_height="@dimen/button_size"
+            android:background="@color/white"
+            android:text="2"
+            android:onClick="Input"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size"
+            app:layout_constraintStart_toEndOf="@+id/btnOne"
+            app:layout_constraintTop_toBottomOf="@+id/btnFive" />
+
+        <Button
+            android:id="@+id/btnThree"
+            android:layout_width="@dimen/button_size"
+            android:layout_height="@dimen/button_size"
+            android:background="@color/white"
+            android:text="3"
+            android:onClick="Input"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size"
+            app:layout_constraintStart_toEndOf="@+id/btnTwo"
+            app:layout_constraintTop_toBottomOf="@+id/btnSix" />
+
+        <Button
+            android:id="@+id/btnEqual"
+            android:layout_width="@dimen/button_size"
+            android:layout_height="180dp"
+            android:background="@color/white"
+            android:text="="
+            android:onClick="Calculate"
+            android:textColor="@color/side_buttons"
+            android:textSize="@dimen/equal_size"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btnThree"
+            app:layout_constraintTop_toBottomOf="@+id/btnAdd" />
+
+        <!-- Fourth Line -->
+
+        <Button
+            android:id="@+id/btnMod"
+            android:layout_width="@dimen/button_size"
+            android:layout_height="@dimen/button_size"
+            android:background="@color/white"
+            android:text="%"
+            android:onClick="Input"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnOne" />
+
+        <Button
+            android:id="@+id/btnZero"
+            android:layout_width="@dimen/button_size"
+            android:layout_height="@dimen/button_size"
+            android:background="@color/white"
+            android:text="0"
+            android:onClick="Input"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size"
+            app:layout_constraintStart_toEndOf="@+id/btnMod"
+            app:layout_constraintTop_toBottomOf="@+id/btnTwo" />
+
+        <Button
+            android:id="@+id/btnComma"
+            android:layout_width="@dimen/button_size"
+            android:layout_height="@dimen/button_size"
+            android:background="@color/white"
+            android:text="."
+            android:onClick="Input"
+            android:textColor="@color/black"
+
+            android:textSize="@dimen/text_size"
+            app:layout_constraintStart_toEndOf="@+id/btnZero"
+            app:layout_constraintTop_toBottomOf="@+id/btnThree" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

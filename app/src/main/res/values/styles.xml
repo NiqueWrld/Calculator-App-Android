@@ -1,0 +1,15 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.CalculatorApp" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryVariant">@color/side_buttons</item>
+    </style>
+
+    <style name="Theme.CalculatorApp.NoActionBar">
+
+    </style>
+
+    <style name="Theme.CalculatorApp.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.CalculatorApp.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+</resources>
